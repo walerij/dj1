@@ -1,8 +1,8 @@
 from django.shortcuts import render
 
-from django.http import HttpResponse
-
 
 def adv_list(request, *args, **kwargs):
-    return render(request,'adv/adv_bs.html',{})
+    #ip = request.META.get('REMOTE_ADDR')
+    adv = ['Мастер на час', 'Экскурсия по Пензе','Выведение из запоя',"Сдача квартиры","Карты Таро"]
+    return render(request,'adv/adv_list.html',{'advs':adv})
 
